@@ -1,0 +1,36 @@
+@mixin remove_anchor_decoration {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@mixin header_navigation_list {
+  ul {
+    list-style: none;
+
+    li {
+      float: left;
+      padding: 0 10px 0 0;
+    }
+  }
+}
+
+#header {
+  #brand {
+    @include remove_anchor_decoration;
+  }
+
+  #nav {
+    @include remove_anchor_decoration;
+    @include header_navigation_list;
+  }
+
+  #user-control {
+    @include remove_anchor_decoration;
+    @include header_navigation_list;
+  }
+}
