@@ -10,4 +10,8 @@
       = render 'header'
       .row
         .twelvecol
+          - flash.each do |name, msg|
+            = content_tag :div, msg, id: "flash_#{name}"
+      .row
+        .twelvecol
           = yield
