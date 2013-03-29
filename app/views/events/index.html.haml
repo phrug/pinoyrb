@@ -1,0 +1,19 @@
+%h1 Events
+
+- unless @current.empty?
+  .row-fluid.current-meetups
+    .span12
+      %h2 Ongoing Events
+      = render :partial => @current, :spacer_template => "event_spacer" 
+
+- unless @upcoming.empty?
+  .row-fluid.upcoming-meetups
+    .span12
+      %h2 Upcoming Events
+      = render :partial => @upcoming, :spacer_template => "event_spacer" 
+
+- unless @past.empty?
+  .row-fluid.past-meetups
+    .span12
+      %h2 Past Events
+      = render :partial => @past, :spacer_template => "event_spacer" 
