@@ -9,7 +9,8 @@
         = link_to "http://www.youtube.com/playlist?list=#{@event.youtube_playlist}", :target => "_blank" do
           %i.icon-film
           Watch event video playlist
-    %h2 Presentations:
+    - unless @event.presentations.empty?
+      %h2 Presentations:
     - @event.presentations.each do |pres|
       .row-fluid
         .span6
