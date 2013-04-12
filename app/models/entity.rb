@@ -8,6 +8,8 @@ class Entity < ActiveRecord::Base
   has_many :contributors, :as => :contributable, :inverse_of => :contributable
   has_many :projects, :through => :contributors
   has_many :links, :as => :linkable, :inverse_of => :linkable
+  has_many :sponsors, :inverse_of => :entity
+  has_many :events, :through => :sponsors
   attr_accessible :description, :display, :entity_type, :name, :recruiting, :slug
 
   attr_accessible :links_attributes, :allow_destroy => true

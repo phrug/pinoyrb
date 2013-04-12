@@ -22,7 +22,7 @@ class Event < ActiveRecord::Base
   scope :current, where("start_at <= current_timestamp and end_at >= current_timestamp").order("start_at")
   scope :past, where("end_at < current_timestamp").order("end_at DESC")
   scope :meetups, where("event_type = 'meetup'")
-  scope :include_children, includes([:sponsors, :entities, { :presentations => { :speakers => :user }}])
+  scope :include_children, includes([{ :sponsors =>  :entity }, { :presentations => { :speakers => :user }}])
 
   def event_type_enum
     EVENT_TYPES
