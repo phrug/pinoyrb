@@ -16,7 +16,8 @@
         .span6
           %h3= pres.name
           %p
-            by
+            - unless pres.speakers.empty?
+              by
             = pres.speakers.map { |s| s.user.name }.join(", ")
 
           - unless pres.slideshare.blank?
