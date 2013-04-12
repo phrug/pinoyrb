@@ -22,11 +22,11 @@
           = link_to ENV['title'], root_url, :class => "brand"
           .nav-collapse.collapse
             %ul.nav
-              %li= link_to "Events", events_url
+              %li{ :class => (controller_name == "events" ? "active" : "") }= link_to "Events", events_url
               %li= link_to "Projects", "#"
               %li= link_to "Companies", "#"
               %li= link_to "People", "#"
-              %li= link_to "Learn Ruby", learn_url
+              %li{ :class => (action_name == "learn" ? "active" : "") }= link_to "Learn Ruby", learn_url
 
     .container.main-container
       - flash.each do |name, msg|
