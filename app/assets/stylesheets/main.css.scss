@@ -10,6 +10,25 @@
   margin-top: 20px;
 }
 
+.front-columns {
+  text-align: center;
+  .span4 {
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    ul.community-links {
+      list-style-type: none;
+      margin: 0;
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
 .event {
   background: #eee;
   padding: 5px 20px 10px;
@@ -25,5 +44,7 @@
 }
 
 footer, .footer {
-  margin-top: 20px;
+  margin-top: 50px;
+  color: #aaa;
+  text-align: center;
 }

@@ -1,19 +1,49 @@
 - build_meta_tags
 .hero-unit
-  %h1 Ruby is FUN and is THE SHIT!
-  %p Holy crap son, this programming language is the best!
-  %p= link_to "Get some #swag &raquo;".html_safe, "#", :class => "btn btn-primary btn-large"
+  %h1 Philippine Ruby Users Group
+  %p 
+    %em (aka PhRUG, PinoyRb, Ruby-Philippines)
+  %p We're a bunch of professionals and hobbyists who share a passion in programming with Ruby.
 
-.row
+.row.front-columns
+
   .span4
-    %h2 We got meetups, yo!
-    %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-    %p= link_to "YOLO!", events_url, :class => "btn"
+    %h2 Know the local scene
+    %p 
+      Want to know who uses Ruby in the Philippines? We've compiled lists of local 
+      = link_to "projects", "#"
+      written in Ruby, 
+      = link_to "companies", "#"
+      who build stuff in Ruby, as well as the 
+      = link_to "people", "#"
+      in the community.
+    %p You can also keep in touch with the community via:
+    %ul.community-links
+      %li
+        = link_to "irc://irc.freenode.net/phrug" do
+          %i.icon-comment
+          IRC
+        (Freenode #phrug)
+      %li
+        = link_to "https://groups.google.com/forum/#!forum/ruby-phil" do
+          %i.icon-facebook
+          Facebook Group
+      %li 
+        = link_to "http://www.facebook.com/groups/phrug/" do
+          %i.icon-envelope
+          Google Group
+      
   .span4
-    %h2 See what we got, yo!
-    %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-    %p= link_to "YOLO!", events_url, :class => "btn"
+    %h2 Join our meetups
+    %p We hold meetups every third Thursday of the month. 
+    %p There we talk about all things related to Ruby and Rails, network over pizza, and afterwards we go out for a drink.
+    %p 
+      Our next meetup is on 
+      %strong 18 April, venue TBA
+    %p= link_to "Find out more about our events", events_url, :class => "btn btn-large"
+    
   .span4
-    %h2 We gon' get wasted!
-    %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-    %p= link_to "YOLO!", events_url, :class => "btn"
+    %h2 Learn Ruby and Rails
+    %p Want to learn Ruby and Rails but don't know which among the many online resources out there are actually good? 
+    %p= link_to "We've got you covered.", learn_url, :class => "btn btn-large"
+
