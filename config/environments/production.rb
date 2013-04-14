@@ -65,6 +65,5 @@ Pinoyrb::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
-  config.assets.initialize_on_precompile = true
   config.assets.enabled = true
 end
