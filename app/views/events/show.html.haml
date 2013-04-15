@@ -1,9 +1,11 @@
+- build_meta_tags title: @event.name, description: strip_tags(@event.description_html)
+
 .row-fluid.event
   .span12
     %h1= @event.name
     = render :partial => "display_time", :locals => { :event => @event }
     - unless @event.description.blank?
-      = raw Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true).render(@event.description)
+      = raw @event.description_html
     - unless @event.youtube_playlist.blank? 
       %p.playlist
         = link_to "http://www.youtube.com/playlist?list=#{@event.youtube_playlist}", :target => "_blank" do
