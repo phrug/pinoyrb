@@ -3,4 +3,4 @@
   to
   = l(event.end_at, :format => :long)
   - if event.start_at.future? 
-    (<%= distance_of_time_in_words_to_now event.start_at %> from now)
+    = "(#{distance_of_time_in_words_to_now event.start_at} from now)"
