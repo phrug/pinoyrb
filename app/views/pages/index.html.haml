@@ -38,8 +38,8 @@
     %p We hold meetups every third Thursday of the month. 
     %p There we talk about all things related to Ruby and Rails, network over pizza, and afterwards we go out for a drink.
     %p 
-      Our next meetup is on 
-      %strong 18 April, venue TBA
+      Our next meetup is on
+      %strong= next_meetup(@next_meetup)
     %p= link_to "Find out more about our events", events_url, :class => "btn btn-large"
     
   .span4

@@ -3,7 +3,7 @@ FactoryGirl.define do
     event_type "meetup"
     name "MyString"
     description "MyText"
-    venue nil
+    venue
     start_at "2013-03-31 15:44:46"
     end_at "2013-03-31 15:44:46"
   end
