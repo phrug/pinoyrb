@@ -31,4 +31,8 @@ class Event < ActiveRecord::Base
   def description_html
     Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true).render(description)
   end
+
+  def gmap_json
+    venue.nil? ? "" : [venue].to_gmaps4rails
+  end
 end

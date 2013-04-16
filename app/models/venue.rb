@@ -6,4 +6,6 @@ class Venue < ActiveRecord::Base
   attr_accessible :address, :directions, :latitude, :longitude, :name
 
   validates :name, :latitude, :longitude, :presence => true
+
+  acts_as_gmappable :process_geocoding => false
 end

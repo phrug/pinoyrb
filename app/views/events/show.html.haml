@@ -2,15 +2,21 @@
 
 .row-fluid.event
   .span12
-    %h1= @event.name
-    = render :partial => "display_time", :locals => { :event => @event }
-    - unless @event.description.blank?
-      = raw @event.description_html
-    - unless @event.youtube_playlist.blank? 
-      %p.playlist
-        = link_to "http://www.youtube.com/playlist?list=#{@event.youtube_playlist}", :target => "_blank" do
-          %i.icon-film
-          Watch event video playlist
+    .row-fluid
+      .span6
+        %h1= @event.name
+        = render :partial => "display_time", :locals => { :event => @event }
+        - unless @event.description.blank?
+          = raw @event.description_html
+        - unless @event.youtube_playlist.blank? 
+          %p.playlist
+            = link_to "http://www.youtube.com/playlist?list=#{@event.youtube_playlist}", :target => "_blank" do
+              %i.icon-film
+              Watch event video playlist
+      - unless @event.venue.nil?
+        .span6
+          = gmaps("markers" => { "data" => @gmap_json }, "map_options" => {"processing" => "json", "auto_zoom" => false, "zoom" => 14})
+
     - unless @event.presentations.empty?
       %h2 Presentations:
     - @event.presentations.each do |pres|

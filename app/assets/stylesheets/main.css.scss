@@ -1,6 +1,7 @@
 @import 'bootstrap';
 @import 'bootstrap-responsive';
 @import 'font-awesome';
+@import 'gmaps4rails';
 
 .hero-unit {
   .ruby-logo {
@@ -57,6 +58,12 @@
   p.event-time {
     color: gray;
     font-style: italic;
+  }
+  .map_container {
+    width: 100%;
+    .gmaps4rails_map {
+      width: 100%;
+    }
   }
 }
 

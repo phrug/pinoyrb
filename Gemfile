@@ -25,6 +25,7 @@ gem 'kaminari', '>= 0.13.0'
 
 gem 'meta-tags', :require => 'meta_tags'
 gem 'redcarpet'
+gem 'gmaps4rails'
 
 group :development, :test do
   gem 'rspec-rails', '>= 2.12.0'
