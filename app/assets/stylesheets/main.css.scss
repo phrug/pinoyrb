@@ -2,6 +2,23 @@
 @import 'bootstrap-responsive';
 @import 'font-awesome';
 
+.hero-unit {
+  .ruby-logo {
+    margin: -25px 0 0 20px;
+  }
+}
+
+@media (max-width: 979px) {
+  .hero-unit {
+    .ruby-logo {
+      text-align: center;
+      display: block;
+      float: none;
+      margin: 0 auto 20px;
+    }
+  }
+}
+
 .main-container {
   margin-top: 20px;
 }
