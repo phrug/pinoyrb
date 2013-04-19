@@ -18,7 +18,7 @@ set :branch, 'master'
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
-set :shared_paths, ['config/database.yml', 'log', 'tmp/puma', 'config/initializers/secret_token.rb', 'config/initializers/asset_sync.rb']
+set :shared_paths, ['config/database.yml', 'log', 'tmp/puma', 'config/initializers/secret_token.rb', 'config/initializers/asset_sync.rb', 'app/views/layouts/_analytics.html.erb']
 
 # Optional settings:
 #   set :user, 'foobar'    # Username in the server to SSH to.
@@ -54,6 +54,9 @@ task :setup => :environment do
   queue! %[touch "#{deploy_to}/shared/config/database.yml"]
   queue! %[touch "#{deploy_to}/shared/config/initializers/secret_token.rb"]
   queue! %[touch "#{deploy_to}/shared/config/initializers/asset_sync.rb"]
+
+  queue! %[mkdir -p "#{deploy_to}/shared/app/views/layouts/"]
+  queue! %[touch "#{deploy_to}/shared/app/views/layouts/_analytics.html.erb"]
 end
 
 namespace :puma do
