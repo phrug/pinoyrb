@@ -27,25 +27,58 @@ Spork.prefork do
     # config.mock_with :flexmock
     # config.mock_with :rr
 
-    config.before(:suite) do
-      DatabaseCleaner.strategy = :deletion
+    config.before :suite do
+      # PerfTools::CpuProfiler.start("/tmp/rspec_profile")
+      DatabaseCleaner.strategy = :transaction
+      DatabaseCleaner.clean_with(:truncation)
     end
 
+    # Request specs cannot use a transaction because Capybara runs in a
+    # separate thread with a different database connection.
+    config.before type: [:request, :feature] do
+      DatabaseCleaner.strategy = :truncation
+    end
+
+    # Reset so other non-request specs don't have to deal with slow truncation.
+    config.after type: [:request, :feature] do
+      DatabaseCleaner.strategy = :transaction
+    end
+
+    RESERVED_IVARS = %w(@loaded_fixtures)
+    last_gc_run = Time.now
+
     config.before(:each) do
+      GC.disable
+    end
+
+    config.before do
       DatabaseCleaner.start
     end
 
-    config.after(:each) do
+    config.after do
       DatabaseCleaner.clean
     end
 
+    # Release instance variables and trigger garbage collection
+    # manually every second to make tests faster
+    # http://blog.carbonfive.com/2011/02/02/crank-your-specs/
+    config.after(:each) do
+      (instance_variables - RESERVED_IVARS).each do |ivar|
+        instance_variable_set(ivar, nil)
+      end
+      if Time.now - last_gc_run > 1.0
+        GC.enable
+        GC.start
+        last_gc_run = Time.now
+      end
+    end
     # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
     config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
     # If you're not using ActiveRecord, or you'd prefer not to run each of your
     # examples within a transaction, remove the following line or assign false
     # instead of true.
-    config.use_transactional_fixtures = true
+    config.use_transactional_fixtures = false
 
     # If true, the base class of anonymous controllers will be inferred
     # automatically. This will be the default behavior in future versions of
@@ -62,15 +95,6 @@ Spork.prefork do
 end
 
 Spork.each_run do
-  load "#{Rails.root}/config/routes.rb"
-  Dir["#{Rails.root}/app/**/*.rb"].each {|f| load f}
-  Dir["#{Rails.root}/lib/**/*.rb"].each {|f| load f}
-
-  # This code will be run each time you run your specs.
-  RSpec.configure do |config|
-    config.mock_with :rspec
-
-    config.use_transactional_fixtures = true
-  end
+  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 end
 
