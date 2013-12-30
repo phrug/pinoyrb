@@ -1,3 +1,6 @@
+- content_for :scripts do
+  = render "gmaps"
+
 - build_meta_tags title: @event.name, description: strip_tags(@event.description_html)
 
 .row-fluid.event
@@ -15,7 +18,8 @@
               Watch event video playlist
       - unless @event.venue.nil?
         .span6
-          = gmaps("markers" => { "data" => @gmap_json }, "map_options" => {"processing" => "json", "auto_zoom" => false, "zoom" => 14})
+          .map_container
+            #map.gmaps4rails_map &nbsp;
 
     - unless @event.presentations.empty?
       %h2 Presentations:

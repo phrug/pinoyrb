@@ -7,5 +7,4 @@ class Venue < ActiveRecord::Base
 
   validates :name, :latitude, :longitude, :presence => true
 
-  acts_as_gmappable :process_geocoding => false
 end

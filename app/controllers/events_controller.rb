@@ -8,7 +8,9 @@ class EventsController < ApplicationController
   def show
     @event = Event.include_children.find(params[:id])
     unless @event.venue.nil?
-      @gmap_json = [@event.venue].to_gmaps4rails do |venue, marker|
+      @hash = Gmaps4rails.build_markers(@event.venue) do |venue, marker|
+        marker.lat venue.latitude
+        marker.lng venue.longitude
         marker.infowindow render_to_string(:partial => "venues/infowindow", :layout => false, :locals => { :venue => venue })
         marker.json({ :id => venue.slug })
       end

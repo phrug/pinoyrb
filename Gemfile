@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.16'
 
 gem 'pg'
-gem 'puma', '2.0.0.b7'
+gem 'puma', '2.7.1'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.5'
@@ -15,6 +15,7 @@ gem 'asset_sync'
 gem 'rails_admin'
 
 gem 'haml'
+gem 'underscore-rails'
 gem 'jquery-rails', '>=2.1.1'
 gem 'devise', '>=2.1.2'
 gem 'cancan', '>= 1.6.8'

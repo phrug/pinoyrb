@@ -10,7 +10,7 @@ require 'mina/rbenv'
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
-set :domain, 'phrug.bryanbibat.net'
+set :domain, 'pinoyrb.org'
 set :deploy_to, '/home/ruby2/phrug'
 set :repository, 'git://github.com/phrug/pinoyrb.git'
 set :user, 'ruby2'
@@ -18,7 +18,7 @@ set :branch, 'master'
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
-set :shared_paths, ['config/database.yml', 'log', 'tmp/puma', 'config/initializers/secret_token.rb', 'config/initializers/asset_sync.rb', 'app/views/layouts/_analytics.html.erb']
+set :shared_paths, ['config/database.yml', 'log', 'tmp/puma', 'config/initializers/secret_token.rb', 'config/initializers/devise.rb', 'config/initializers/asset_sync.rb', 'app/views/layouts/_analytics.html.erb']
 
 # Optional settings:
 #   set :user, 'foobar'    # Username in the server to SSH to.
@@ -53,6 +53,7 @@ task :setup => :environment do
 
   queue! %[touch "#{deploy_to}/shared/config/database.yml"]
   queue! %[touch "#{deploy_to}/shared/config/initializers/secret_token.rb"]
+  queue! %[touch "#{deploy_to}/shared/config/initializers/devise.rb"]
   queue! %[touch "#{deploy_to}/shared/config/initializers/asset_sync.rb"]
 
   queue! %[mkdir -p "#{deploy_to}/shared/app/views/layouts/"]
