@@ -47,6 +47,14 @@
   }
 }
 
+.user-links {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
 .event {
   background: #eee;
   padding: 5px 20px 10px;
