@@ -25,7 +25,7 @@
               %li{ :class => (controller_name == "events" ? "active" : "") }= link_to "Events", events_url
               %li= link_to "Projects", "#"
               %li= link_to "Companies", "#"
-              %li= link_to "People", "#"
+              %li{ :class => (controller_name == "users" ? "active" : "") }= link_to "Users", users_url
               %li{ :class => (action_name == "learn" ? "active" : "") }= link_to "Learn Ruby", learn_url
 
     .container.main-container

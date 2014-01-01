@@ -1,0 +1,28 @@
+%h1= @user.name
+%h2 Talks and Presentations:
+- @user.presentations.each do |pres|
+  .row-fluid
+    .span6
+      %h3= pres.name
+      %p
+        Presented at
+        = link_to pres.event.name, pres.event
+        - unless pres.speakers.count < 2
+          by
+          = pres.speakers.map { |s| s.user.name }.join(", ")
+        
+      - unless pres.slideshare.blank?
+        = link_to "http://www.slideshare.net/#{pres.slideshare}", :target => "_blank" do
+          %i.icon-external-link
+          View slides new tab
+      - unless pres.speakerdeck.blank?
+        = link_to "http://www.speakerdeck.com/#{pres.speakerdeck}", :target => "_blank" do
+          %i.icon-external-link
+          View slides new tab
+    .span6
+      - unless pres.youtube.blank?
+        %iframe{ width: "560", height: "315", src: "http://www.youtube-nocookie.com/embed/#{pres.youtube}", frameborder:"0", allowfullscreen: "allowfullscreen" }
+        %p
+          = link_to "http://www.youtube.com/watch?v=#{pres.youtube}", :target => "_blank" do
+            %i.icon-film
+            Watch video in new tab

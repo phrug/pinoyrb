@@ -30,7 +30,7 @@
           %p
             - unless pres.speakers.empty?
               by
-            = pres.speakers.map { |s| s.user.name }.join(", ")
+              = pres.speakers.map { |s| s.user.name }.join(", ")
 
           - unless pres.slideshare.blank?
             = link_to "http://www.slideshare.net/#{pres.slideshare}", :target => "_blank" do
