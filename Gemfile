@@ -28,6 +28,8 @@ gem 'meta-tags', :require => 'meta_tags'
 gem 'redcarpet'
 gem 'gmaps4rails'
 
+gem 'sitemap_generator'
+
 group :development, :test do
   gem 'rspec-rails', '>= 2.12.0'
   gem 'haml-rails', '~> 0.4'
