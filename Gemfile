@@ -49,7 +49,6 @@ group :test do
   gem 'database_cleaner', '>= 0.8.0'
   gem 'spork', '>= 0.9.2'
   gem 'guard'
-  gem 'guard'
   gem 'guard-bundler'
   gem 'guard-rspec'
   gem 'guard-spork'
