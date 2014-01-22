@@ -8,7 +8,7 @@ module ApplicationHelper
       :description => description,
       :type => page_type,
       :url => url_for(:only_path => false),
-      :image => image
+      :image => [image, { :width => 200, :height => 200 }]
     } 
   end
 
