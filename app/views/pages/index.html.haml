@@ -1,5 +1,5 @@
 - build_meta_tags
-.hero-unit
+.jumbotron
   .pull-right.ruby-logo
     = render :partial => "ruby_logo"
   %h1 Philippine Ruby Users Group
@@ -10,10 +10,11 @@
 .alert.alert-danger
   %strong RubyConf Philippines
   will be held on 28-29 March, 2014.
-  = link_to "Visit the official site for more details.", "http://rubyconf.ph", target: "_blank"
+  = link_to "Visit the official site for more details.", "http://rubyconf.ph"
+
 .row.front-columns
 
-  .span4
+  .col-md-4
     %h2 Know the local scene
     %p 
       Want to know who uses Ruby in the Philippines? We've compiled lists of local 
@@ -27,29 +28,29 @@
     %ul.community-links
       %li
         = link_to "irc://irc.freenode.net/phrug" do
-          %i.icon-comment
+          %span.glyphicon.glyphicon-comment
           IRC
         (Freenode #phrug)
       %li
         = link_to "http://www.facebook.com/groups/phrug/" do
-          %i.icon-facebook
+          %span.fa.fa-facebook
           Facebook Group
       %li 
         = link_to "https://groups.google.com/forum/#!forum/ruby-phil" do
-          %i.icon-envelope
+          %span.glyphicon.glyphicon-envelope
           Google Group
       
-  .span4
+  .col-md-4
     %h2 Join our meetups
     %p We hold meetups every third Thursday of the month. 
     %p There we talk about all things related to Ruby and Rails, network over pizza, and afterwards we go out for a drink.
     %p 
       Our next meetup is on
       %strong= next_meetup(@next_meetup)
-    %p= link_to "Find out more about our events", events_url, :class => "btn btn-large"
+    %p= link_to "Find out more about our events", events_url, :class => "btn btn-default btn-lg"
     
-  .span4
+  .col-md-4
     %h2 Learn Ruby and Rails
     %p Want to learn Ruby and Rails but don't know which among the many online resources out there are actually good? 
-    %p= link_to "We've got you covered.", learn_url, :class => "btn btn-large"
+    %p= link_to "We've got you covered.", learn_url, :class => "btn btn-default btn-lg"
 

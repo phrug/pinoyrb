@@ -14,7 +14,7 @@ gem 'asset_sync'
 gem 'rails_admin'
 
 gem 'haml'
-gem 'bootstrap-sass', "~> 2.3.2.2"
+gem 'bootstrap-sass', "~> 3.0.3.0"
 gem 'underscore-rails'
 gem 'jquery-rails', '>=2.1.1'
 gem 'devise', '>=2.1.2'

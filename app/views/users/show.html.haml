@@ -8,8 +8,8 @@
       %i{ :class => "#{Link::LINK_TYPE_FA_LOOKUP[link.link_type]} icon-large", :title => link.link_type }
 %h2 Talks and Presentations:
 - @user.presentations.each do |pres|
-  .row-fluid
-    .span6
+  .row
+    .col-lg-6.col-md-4.col-sm-12
       %h3= pres.name
       %p
         Presented at
@@ -20,16 +20,16 @@
         
       - unless pres.slideshare.blank?
         = link_to "http://www.slideshare.net/#{pres.slideshare}", :target => "_blank" do
-          %i.icon-external-link
+          %span.fa.fa-external-link
           View slides new tab
       - unless pres.speakerdeck.blank?
         = link_to "http://www.speakerdeck.com/#{pres.speakerdeck}", :target => "_blank" do
-          %i.icon-external-link
+          %span.fa.fa-external-link
           View slides new tab
-    .span6
+    .col-lg-6.col-md-4.col-sm-12
       - unless pres.youtube.blank?
         %iframe{ width: "560", height: "315", src: "http://www.youtube-nocookie.com/embed/#{pres.youtube}", frameborder:"0", allowfullscreen: "allowfullscreen" }
         %p
           = link_to "http://www.youtube.com/watch?v=#{pres.youtube}", :target => "_blank" do
-            %i.icon-film
+            %span.glyphicon.glyphicon-film
             Watch video in new tab

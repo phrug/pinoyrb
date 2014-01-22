@@ -3,10 +3,10 @@
 
 - build_meta_tags title: @event.name, description: strip_tags(@event.description_html)
 
-.row-fluid.event
-  .span12
-    .row-fluid
-      .span6
+.row.event
+  .col-sm-12
+    .row
+      .col-md-6.col-sm-12
         %h1= @event.name
         = render :partial => "display_time", :locals => { :event => @event }
         - unless @event.description.blank?
@@ -14,18 +14,18 @@
         - unless @event.youtube_playlist.blank? 
           %p.playlist
             = link_to "http://www.youtube.com/playlist?list=#{@event.youtube_playlist}", :target => "_blank" do
-              %i.icon-film
+              %span.glyphicon.glyphicon-film
               Watch event video playlist
       - unless @event.venue.nil?
-        .span6
+        .col-md-6.col-sm-12
           .map_container
             #map.gmaps4rails_map &nbsp;
 
     - unless @event.presentations.empty?
       %h2 Presentations:
     - @event.presentations.each do |pres|
-      .row-fluid
-        .span6
+      .row
+        .col-lg-6.col-md-4.col-sm-12
           %h3= pres.name
           %p
             - unless pres.speakers.empty?
@@ -34,18 +34,18 @@
 
           - unless pres.slideshare.blank?
             = link_to "http://www.slideshare.net/#{pres.slideshare}", :target => "_blank" do
-              %i.icon-external-link
+              %span.glyphicon.glyphicon-external-link
               View slides new tab
           - unless pres.speakerdeck.blank?
             = link_to "http://www.speakerdeck.com/#{pres.speakerdeck}", :target => "_blank" do
-              %i.icon-external-link
+              %span.glyphicon.glyphicon-external-link
               View slides new tab
-        .span6
+        .col-lg-6.col-md-8.col-sm-12
           - unless pres.youtube.blank?
             %iframe{ width: "560", height: "315", src: "http://www.youtube-nocookie.com/embed/#{pres.youtube}", frameborder:"0", allowfullscreen: "allowfullscreen" }
             %p
               = link_to "http://www.youtube.com/watch?v=#{pres.youtube}", :target => "_blank" do
-                %i.icon-film
+                %span.glyphicon.glyphicon-film
                 Watch video in new tab
 
 
