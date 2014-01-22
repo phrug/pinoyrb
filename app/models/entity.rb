@@ -10,11 +10,7 @@ class Entity < ActiveRecord::Base
   has_many :links, :as => :linkable, :inverse_of => :linkable
   has_many :sponsors, :inverse_of => :entity
   has_many :events, :through => :sponsors
-  attr_accessible :description, :display, :entity_type, :name, :recruiting, :slug
-
-  attr_accessible :links_attributes, :allow_destroy => true
   accepts_nested_attributes_for :links, :allow_destroy => true
-  attr_accessible :link_ids
 
   ENTITY_TYPES = %w(company organization school)
 

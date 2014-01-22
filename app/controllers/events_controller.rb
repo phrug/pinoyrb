@@ -6,7 +6,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.include_children.find(params[:id])
+    @event = Event.include_children.friendly.find(params[:id])
     unless @event.venue.nil?
       @hash = Gmaps4rails.build_markers(@event.venue) do |venue, marker|
         marker.lat venue.latitude

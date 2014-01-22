@@ -17,12 +17,6 @@ class User < ActiveRecord::Base
   has_many :links, :as => :linkable, :inverse_of => :linkable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
-  attr_accessible :name, :blurb, :about_me
-  # attr_accessible :title, :body
-
-  attr_accessible :links_attributes, :allow_destroy => true
   accepts_nested_attributes_for :links, :allow_destroy => true
-  attr_accessible :link_ids
 
 end

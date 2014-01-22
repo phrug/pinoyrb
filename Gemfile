@@ -1,26 +1,26 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.16'
+gem 'rails', '4.0.2'
 
 gem 'pg'
 gem 'puma', '2.7.1'
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.5'
-  gem 'coffee-rails', '~> 3.2.2'
-  gem 'uglifier', '>= 1.2.7'
-end
+gem 'sass-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 2.0.1'
+
 gem 'asset_sync'
 
 gem 'rails_admin'
 
 gem 'haml'
+gem 'bootstrap-sass', "~> 2.3.2.2"
 gem 'underscore-rails'
 gem 'jquery-rails', '>=2.1.1'
 gem 'devise', '>=2.1.2'
 gem 'cancan', '>= 1.6.8'
 
-gem 'friendly_id', '>= 4.0.8'
+gem 'friendly_id', '>= 5.0.2'
 gem 'simple_form', '>=2.0.2'
 gem 'kaminari', '>= 0.13.0'
 
