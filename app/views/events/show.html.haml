@@ -34,11 +34,11 @@
 
           - unless pres.slideshare.blank?
             = link_to "http://www.slideshare.net/#{pres.slideshare}", :target => "_blank" do
-              %span.glyphicon.glyphicon-external-link
+              %span.fa.fa-external-link
               View slides new tab
           - unless pres.speakerdeck.blank?
             = link_to "http://www.speakerdeck.com/#{pres.speakerdeck}", :target => "_blank" do
-              %span.glyphicon.glyphicon-external-link
+              %span.fa.fa-external-link
               View slides new tab
         .col-lg-6.col-md-8.col-sm-12
           - unless pres.youtube.blank?
