@@ -5,7 +5,7 @@
 %p.user-links
   - @user.links.each do |link|
     = link_to link.url, :target => "_blank" do
-      %i{ :class => "#{Link::LINK_TYPE_FA_LOOKUP[link.link_type]} icon-large", :title => link.link_type }
+      %i{ :class => "fa #{Link::LINK_TYPE_FA_LOOKUP[link.link_type]} fa-2x", :title => link.link_type }
 
 - unless @user.presentations.count < 1
   %h2 Talks and Presentations:
