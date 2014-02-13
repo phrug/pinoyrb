@@ -9,7 +9,7 @@ SitemapGenerator::Sitemap.create do
     add event_path(event), :lastmod => event.updated_at
   end
 
-  add users_path, :priority => 0.7, :changefreq => 'montly'
+  add users_path, :priority => 0.7, :changefreq => 'monthly'
 
   User.all.each do |user|
     add user_path(user), :lastmod => user.updated_at
