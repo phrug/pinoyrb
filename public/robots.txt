@@ -2,5 +2,5 @@
 #
 # To ban all spiders from the entire site uncomment the next two lines:
 User-Agent: *
-Disallow: /
+Disallow: /admin/
 Sitemap: http://pinoyrb.org/sitemap.xml.gz
