@@ -31,4 +31,20 @@ class Event < ActiveRecord::Base
   def gmap_json
     venue.nil? ? "" : [venue].to_gmaps4rails
   end
+
+  def to_ical_event
+    ical_event = Icalendar::Event.new
+
+    ical_event.dtstart     = start_at.to_s(:ical_local)
+    ical_event.dtend       = end_at.to_s(:ical_local)
+    ical_event.summary     = "#{name} (#{event_type})"
+    ical_event.description = description
+
+    unless venue.nil?
+      ical_event.location = venue.address
+      ical_event.geo      = "#{venue.latitude};#{venue.longitude}"
+    end
+
+    ical_event
+  end
 end

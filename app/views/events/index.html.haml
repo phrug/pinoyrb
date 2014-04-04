@@ -2,6 +2,11 @@
 
 %h1 Events
 
+.pull-right
+  = link_to events_url(format: 'ics', protocol: 'webcal'), class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-calendar
+    Calendar Subscription
+
 - unless @current.empty?
   .row.current-meetups
     .col-md-12
