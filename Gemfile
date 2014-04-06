@@ -29,6 +29,7 @@ gem 'redcarpet'
 gem 'gmaps4rails'
 
 gem 'sitemap_generator'
+gem 'icalendar', '~> 1.5.2'
 
 group :development, :test do
   gem 'rspec-rails', '>= 2.12.0'

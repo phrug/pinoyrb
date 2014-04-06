@@ -1,0 +1,8 @@
+<% calendar = Icalendar::Calendar.new -%>
+<% calendar.timezone do |timezone| -%>
+  <% timezone.tzid = "Asia/Manila" -%>
+<% end -%>
+<% (@current + @upcoming + @past).each do |event| -%>
+  <% calendar.add_event(event.to_ical_event) -%>
+<% end -%>
+<%= calendar.to_ical %>

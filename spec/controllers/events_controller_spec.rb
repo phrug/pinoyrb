@@ -7,4 +7,11 @@ describe EventsController do
       response.should be_success
     end
   end
+
+  describe "GET 'index.ics'" do
+    it "returns http success" do
+      get 'index', format: 'ics'
+      response.should be_success
+    end
+  end
 end
