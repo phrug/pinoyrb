@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.4'
+gem 'rails', '4.1.0'
 
 gem 'pg'
-gem 'puma', '2.8.1'
+gem 'puma', '2.8.2'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -14,7 +14,7 @@ gem 'asset_sync'
 gem 'rails_admin'
 
 gem 'haml'
-gem 'bootstrap-sass', "~> 3.1.1.0"
+gem 'bootstrap-sass', "~> 3.1.1.1"
 gem 'underscore-rails'
 gem 'jquery-rails', '>=2.1.1'
 gem 'devise', '>=2.1.2'
@@ -29,7 +29,7 @@ gem 'redcarpet'
 gem 'gmaps4rails'
 
 gem 'sitemap_generator'
-gem 'icalendar', '~> 1.5.2'
+gem 'icalendar', '~> 2.0.0'
 
 group :development, :test do
   gem 'rspec-rails', '>= 2.12.0'
