@@ -62,4 +62,19 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Event do
+    create do
+      configure :slug do
+        hide
+      end
+    end
+  end
+
+  config.model Venue do
+    create do
+      configure :slug do
+        hide
+      end
+    end
+  end
 end
