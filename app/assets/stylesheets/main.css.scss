@@ -59,9 +59,6 @@
   padding: 5px 20px 10px;
   margin-top: 10px;
   border-radius: 5px;
-  h3 {
-    margin-bottom: 0px;
-  }
   p.event-time {
     color: gray;
     font-style: italic;
@@ -71,6 +68,16 @@
     .gmaps4rails_map {
       width: 100%;
     }
+  }
+}
+
+.presentation {
+  h3 {
+    margin-bottom: 0px;
+  }
+  p.tags {
+    font-size: 80%;
+    font-style: italic;
   }
 }
 

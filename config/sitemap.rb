@@ -14,4 +14,10 @@ SitemapGenerator::Sitemap.create do
   User.all.each do |user|
     add user_path(user), :lastmod => user.updated_at
   end
+
+  add tags_path, :priority => 0.7, :changefreq => 'monthly'
+
+  Tag.all.each do |tag|
+    add tag_path(tag), :lastmod => tag.updated_at
+  end
 end

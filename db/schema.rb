@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140423125424) do
+ActiveRecord::Schema.define(version: 20140423143711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -113,6 +113,16 @@ ActiveRecord::Schema.define(version: 20140423125424) do
     t.datetime "updated_at",    null: false
   end
 
+  create_table "presentation_tags", force: true do |t|
+    t.integer  "presentation_id"
+    t.integer  "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "presentation_tags", ["presentation_id"], name: "index_presentation_tags_on_presentation_id", using: :btree
+  add_index "presentation_tags", ["tag_id"], name: "index_presentation_tags_on_tag_id", using: :btree
+
   create_table "presentations", force: true do |t|
     t.string   "name"
     t.string   "slug"
@@ -177,6 +187,16 @@ ActiveRecord::Schema.define(version: 20140423125424) do
 
   add_index "sponsors", ["entity_id"], name: "index_sponsors_on_entity_id", using: :btree
   add_index "sponsors", ["event_id"], name: "index_sponsors_on_event_id", using: :btree
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tags", ["slug"], name: "index_tags_on_slug", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

@@ -1,0 +1,9 @@
+- build_meta_tags title: "Tags"
+
+%h1 Tags
+
+%ul.tag-list
+  - @tags.each do |tag|
+    %li
+      = link_to tag.name, tag
+      %span.badge= tag.presentations.count

@@ -24,28 +24,5 @@
     - unless @event.presentations.empty?
       %h2 Presentations:
     - @event.presentations.each do |pres|
-      .row
-        .col-lg-6.col-md-4.col-sm-12
-          %h3= pres.name
-          %p
-            - unless pres.speakers.empty?
-              by
-              = pres.speakers.map { |s| s.user.name }.join(", ")
-
-          - unless pres.slideshare.blank?
-            = link_to "http://www.slideshare.net/#{pres.slideshare}", :target => "_blank" do
-              %span.fa.fa-external-link
-              View slides new tab
-          - unless pres.speakerdeck.blank?
-            = link_to "http://www.speakerdeck.com/#{pres.speakerdeck}", :target => "_blank" do
-              %span.fa.fa-external-link
-              View slides new tab
-        .col-lg-6.col-md-8.col-sm-12
-          - unless pres.youtube.blank?
-            %iframe{ width: "560", height: "315", src: "http://www.youtube-nocookie.com/embed/#{pres.youtube}", frameborder:"0", allowfullscreen: "allowfullscreen" }
-            %p
-              = link_to "http://www.youtube.com/watch?v=#{pres.youtube}", :target => "_blank" do
-                %span.glyphicon.glyphicon-film
-                Watch video in new tab
-
+      = render partial: "shared/presentation", locals: { pres: pres }
 
