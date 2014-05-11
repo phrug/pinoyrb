@@ -1,0 +1,31 @@
+- build_meta_tags title: "Site Search"
+
+%h1 Site Search
+= form_tag search_path, method: :get do
+  .form-group
+    = text_field_tag "q", params[:q], class: "form-control"
+  %button.btn.btn-default{ type: "submit" } Search
+
+- unless params[:q].blank?
+  %hr
+  %h2 
+    Search results for
+    = "\"#{params[:q]}\""
+
+  %h3 Events
+
+  - @events.each do |event|
+    = render :partial => event, :spacer_template => "event_spacer" 
+
+  %h3 Tags
+
+  %ul.tag-list
+    - @tags.each do |tag|
+      %li
+        = link_to tag.name, tag
+        %span.badge= tag.presentations.count
+
+  %h3 Presentations
+  - @presentations.each do |pres|
+    = render partial: "shared/presentation", locals: { pres: pres }
+

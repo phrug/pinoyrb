@@ -124,7 +124,7 @@ GEM
       libnotify
       puma
       rb-inotify
-    guard-rspec (4.2.8)
+    guard-rspec (4.2.9)
       guard (~> 2.1)
       rspec (>= 2.14, < 4.0)
     guard-spork (1.5.1)
@@ -289,6 +289,8 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    textacular (3.2.0)
+      activerecord (>= 3.0, < 4.2)
     thor (0.19.1)
     thread_safe (0.3.3)
     tilt (1.4.1)
@@ -357,5 +359,6 @@ DEPENDENCIES
   simplecov
   sitemap_generator
   spork (>= 0.9.2)
+  textacular (~> 3.0)
   uglifier (>= 2.0.1)
   underscore-rails

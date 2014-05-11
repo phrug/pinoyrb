@@ -1,5 +1,6 @@
 Pinoyrb::Application.routes.draw do
 
+  resource :search, :only => [:show]
   resources :events, :only => [:index, :show]
   resources :tags, :only => [:index, :show]
 

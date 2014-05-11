@@ -1,7 +1,7 @@
 .row.event
   .col-sm-12
     %h3= link_to event.name, event
-    = render :partial => "display_time", :locals => { :event => event }
+    = render :partial => "events/display_time", :locals => { :event => event }
     - unless event.youtube_playlist.blank? 
       %p.playlist
         = link_to "http://www.youtube.com/playlist?list=#{event.youtube_playlist}", :target => "_blank" do
