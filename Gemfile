@@ -34,7 +34,7 @@ gem 'icalendar', '~> 2.0.0'
 gem 'textacular', '~> 3.0'
 
 group :development, :test do
-  gem 'rspec-rails', '>= 2.12.0'
+  gem 'rspec-rails', '~> 2.14.1'
   gem 'haml-rails', '~> 0.4'
   gem 'mina'
   gem 'pry'

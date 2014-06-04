@@ -78,6 +78,14 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Presentation do
+    create do
+      configure :slug do
+        hide
+      end
+    end
+  end
+
   config.model Tag do
     create do
       configure :slug do
