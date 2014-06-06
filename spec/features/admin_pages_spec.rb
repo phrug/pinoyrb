@@ -7,14 +7,14 @@ describe 'Admin page' do
     it 'should kick me out if not logged in' do
       logout(:admin_user)
       visit rails_admin_path
-      page.should_not have_title("Site Administration | Pinoyrb Admin")
+      expect(page).not_to have_title("Site Administration | Pinoyrb Admin")
     end
 
     it 'should not kick me out if logged in' do
       user = FactoryGirl.create(:admin_user)
       login_as(user, :scope => :admin_user)
       visit rails_admin_path
-      page.should have_title("Site Administration | Pinoyrb Admin")
+      expect(page).to have_title("Site Administration | Pinoyrb Admin")
     end
   end
 end

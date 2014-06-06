@@ -5,7 +5,7 @@ describe TagsController do
     it "returns http success" do
       FactoryGirl.create(:tag)
       get 'index'
-      response.should be_success
+      expect(response).to be_success
     end
   end
 
@@ -13,7 +13,7 @@ describe TagsController do
     it "returns http success" do
       tag = FactoryGirl.create(:tag)
       get 'show', id: tag.slug
-      response.should be_success
+      expect(response).to be_success
     end
 
     it "requires the :id parameter" do

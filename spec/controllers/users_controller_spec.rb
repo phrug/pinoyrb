@@ -5,7 +5,7 @@ describe UsersController do
   describe "GET 'index'" do
     it "returns http success" do
       get 'index'
-      response.should be_success
+      expect(response).to be_success
     end
   end
 
@@ -13,7 +13,7 @@ describe UsersController do
     it "returns http success" do
       user = FactoryGirl.create(:user)
       get 'show', id: user.slug
-      response.should be_success
+      expect(response).to be_success
     end
 
     it "requires the :id parameter" do

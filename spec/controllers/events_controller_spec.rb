@@ -4,7 +4,7 @@ describe EventsController do
   describe "GET 'index'" do
     it "returns http success" do
       get 'index'
-      response.should be_success
+      expect(response).to be_success
     end
   end
 
@@ -12,7 +12,7 @@ describe EventsController do
     it "returns http success" do
       event = FactoryGirl.create(:event)
       get 'index', format: 'ics'
-      response.should be_success
+      expect(response).to be_success
     end
   end
 end

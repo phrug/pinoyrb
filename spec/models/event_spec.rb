@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Event do
   it 'should generate slug on create' do
-    FactoryGirl.create(:event, name: "Random Event").slug.should == "random-event"
+    expect(FactoryGirl.create(:event, name: "Random Event").slug).to eq("random-event")
   end
 
   describe "#to_ical_event" do
