@@ -12,7 +12,6 @@ Spork.prefork do
   ENV["RAILS_ENV"] ||= 'test'
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'
-  require 'rspec/autorun'
 
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
@@ -26,6 +25,8 @@ Spork.prefork do
     # config.mock_with :mocha
     # config.mock_with :flexmock
     # config.mock_with :rr
+
+    config.infer_spec_type_from_file_location!
 
     config.before :suite do
       # PerfTools::CpuProfiler.start("/tmp/rspec_profile")

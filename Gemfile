@@ -34,7 +34,7 @@ gem 'icalendar', '~> 2.0.0'
 gem 'textacular', '~> 3.0'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 2.14.1'
+  gem 'rspec-rails', '~> 3.0.1'
   gem 'haml-rails', '~> 0.4'
   gem 'mina'
   gem 'pry'
@@ -48,7 +48,7 @@ group :test do
   gem 'factory_girl_rails', '>= 4.0.0'
   gem 'email_spec', '>= 1.2.1'
   gem 'shoulda', '>=3.1.1'
-  gem 'capybara', '~> 2.2.1'
+  gem 'capybara', '~> 2.3.0'
   gem 'database_cleaner', '>= 0.8.0'
   gem 'spork', '>= 0.9.2'
   gem 'guard'
