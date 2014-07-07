@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.1'
+gem 'rails', '4.1.4'
 
 gem 'pg'
 gem 'puma', '2.8.2'
@@ -14,7 +14,7 @@ gem 'asset_sync'
 gem 'rails_admin'
 
 gem 'haml'
-gem 'bootstrap-sass', "~> 3.1.1.1"
+gem 'bootstrap-sass', "~> 3.2.0.0"
 gem 'underscore-rails'
 gem 'jquery-rails', '>=2.1.1'
 gem 'devise', '>=2.1.2'
@@ -29,9 +29,9 @@ gem 'redcarpet'
 gem 'gmaps4rails'
 
 gem 'sitemap_generator'
-gem 'icalendar', '~> 2.0.0'
+gem 'icalendar', '~> 2.1.0'
 
-gem 'textacular', '~> 3.0'
+gem 'textacular', '~> 3.2.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.1'
@@ -49,7 +49,7 @@ group :test do
   gem 'factory_girl_rails', '>= 4.0.0'
   gem 'email_spec', '>= 1.2.1'
   gem 'shoulda', '>=3.1.1'
-  gem 'capybara', '~> 2.3.0'
+  gem 'capybara', '~> 2.4.1'
   gem 'database_cleaner', '>= 0.8.0'
   gem 'spork', '>= 0.9.2'
   gem 'guard'
