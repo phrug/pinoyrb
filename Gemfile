@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.4'
 
 gem 'pg'
-gem 'puma', '2.8.2'
+gem 'puma', '2.9.0'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
