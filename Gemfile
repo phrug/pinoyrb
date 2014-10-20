@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.5'
+gem 'rails', '4.1.6'
 
 gem 'pg'
-gem 'puma', '2.9.0'
+gem 'puma', '2.9.1'
 
 gem 'sass-rails', '~> 4.0.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 2.0.1'
 
 gem 'asset_sync'
@@ -29,12 +29,12 @@ gem 'redcarpet'
 gem 'gmaps4rails'
 
 gem 'sitemap_generator'
-gem 'icalendar', '~> 2.1.0'
+gem 'icalendar', '~> 2.2.0'
 
 gem 'textacular', '~> 3.2.0'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.1'
+  gem 'rspec-rails', '~> 3.1.0'
   gem 'haml-rails', '~> 0.4'
   gem 'mina'
   gem 'pry'
