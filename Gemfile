@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.6'
+gem 'rails', '4.1.7'
 
 gem 'pg'
 gem 'puma', '2.9.1'
@@ -14,7 +14,7 @@ gem 'asset_sync'
 gem 'rails_admin'
 
 gem 'haml'
-gem 'bootstrap-sass', "~> 3.2.0.0"
+gem 'bootstrap-sass', "~> 3.3.1.0"
 gem 'underscore-rails'
 gem 'jquery-rails', '>=2.1.1'
 gem 'devise', '>=2.1.2'
