@@ -207,7 +207,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (2.9.1)
+    puma (2.9.2)
       rack (>= 1.1, < 2.0)
     quiet_assets (1.0.3)
       railties (>= 3.1, < 5.0)
@@ -367,7 +367,7 @@ DEPENDENCIES
   mina
   pg
   pry
-  puma (= 2.9.1)
+  puma (~> 2.9.1)
   quiet_assets
   rails (= 4.1.7)
   rails_admin
