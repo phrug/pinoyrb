@@ -13,8 +13,7 @@
   = link_to "Visit the official site for more details.", "http://rubyconf.ph"
 
 .row.front-columns
-
-  .col-md-4
+  .col-md-6
     %h2 Know the local scene
     %p 
       Want to know who uses Ruby in the Philippines? Connect with the community via:
@@ -37,8 +36,7 @@
         = link_to "https://groups.google.com/forum/#!forum/ruby-phil" do
           %span.fa.fa-envelope
           Google Group
-      
-  .col-md-4
+  .col-md-6
     %h2 Join our meetups
     %p We hold meetups every third Thursday of the month. 
     %p There we talk about all things related to Ruby and Rails, network over pizza, and afterwards we go out for a drink.
@@ -46,9 +44,16 @@
       Our next meetup is on
       %strong= next_meetup(@next_meetup)
     %p= link_to "Find out more about our events", events_url, :class => "btn btn-default btn-lg"
-    
-  .col-md-4
+
+.row.front-columns
+  .col-md-6
+    %h2 Listen to the podcasts
+    %p Traffic preventing you from joining the meetups?
+    %p We're experimenting on having a podcast every two weeks.
+    %p= link_to "Find out more about our podcasts", podcasts_url, :class => "btn btn-default btn-lg"
+  .col-md-6
     %h2 Learn Ruby and Rails
     %p Want to learn Ruby and Rails but don't know which among the many online resources out there are actually good? 
     %p= link_to "We've got you covered.", learn_url, :class => "btn btn-default btn-lg"
+    
 

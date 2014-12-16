@@ -12,5 +12,6 @@ Pinoyrb::Application.routes.draw do
 
   root :to => "pages#index"
   get "/learn", :to => "pages#learn", :as => 'learn'
+  get "/podcasts", :to => "pages#podcasts", :as => 'podcasts'
 
 end
