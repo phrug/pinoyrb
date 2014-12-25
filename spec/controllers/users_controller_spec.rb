@@ -17,7 +17,7 @@ describe UsersController do
     end
 
     it "requires the :id parameter" do
-      expect { get :show }.to raise_error(ActionController::RoutingError)
+      expect { get :show }.to raise_error(ActionController::UrlGenerationError)
     end
 
     it "requires existing user" do
