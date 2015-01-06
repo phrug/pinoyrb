@@ -35,7 +35,7 @@
 
     .container.main-container
       - flash.each do |name, msg|
-        %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
+        %div{:class => "alert alert-#{name == "notice" ? "success" : "danger"}"}
           %a.close{"data-dismiss" => "alert"} ×
           = msg
       .row
