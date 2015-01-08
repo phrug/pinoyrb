@@ -13,6 +13,7 @@ gem 'rails_admin', '~> 0.6.5'
 
 gem 'haml'
 gem 'bootstrap-sass', "~> 3.3.1.0"
+gem 'autoprefixer-rails'
 gem 'underscore-rails'
 gem 'jquery-rails', '>=4.0.2'
 gem 'devise', '>=2.1.2'
