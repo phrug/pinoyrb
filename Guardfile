@@ -7,7 +7,7 @@ guard 'bundler' do
   # watch(/^.+\.gemspec/)
 end
 
-guard 'puma', :port => 3000 do
+guard 'puma', :port => 3000, :environment => "development" do
   watch('Gemfile.lock')
   watch(%r{^config|lib/.*})
 end
