@@ -27,7 +27,7 @@ gem 'redcarpet'
 gem 'gmaps4rails'
 
 gem 'sitemap_generator'
-gem 'icalendar', '~> 2.2.0'
+gem 'icalendar', '~> 2.3.0'
 
 gem 'textacular', '~> 3.2.0'
 
