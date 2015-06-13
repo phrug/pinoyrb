@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-  def build_meta_tags(description: "We're a bunch of professionals and hobbyists who share a passion in programming with Ruby (e.g. Ruby on Rails).", title: nil, image: path_to_image("opengraph.jpg"), page_type: :website)
+  def build_meta_tags(description: "We're a bunch of professionals and hobbyists who share a passion in programming with Ruby (e.g. Ruby on Rails).", title: nil, image: url_to_image("opengraph.jpg"), page_type: :website)
     set_meta_tags :title => title,
                   :description => description,
                   :open_graph => {
