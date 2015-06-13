@@ -32,7 +32,7 @@ gem 'icalendar', '~> 2.3.0'
 gem 'textacular', '~> 3.2.0'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.2.0'
+  gem 'rspec-rails', '~> 3.3.0'
   gem 'haml-rails', '~> 0.4'
   gem 'mina'
   gem 'pry'
