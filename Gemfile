@@ -9,7 +9,7 @@ gem 'sass-rails', '~> 5.0.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 2.0.1'
 
-gem 'rails_admin', '~> 0.6.5'
+gem 'rails_admin', '~> 0.7.0'
 
 gem 'haml'
 gem 'bootstrap-sass', "~> 3.3.3"
