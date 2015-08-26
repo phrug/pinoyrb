@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.2.0'
 
 gem 'pg'
-gem 'puma', '~> 2.12.0'
+gem 'puma', '~> 2.13.0'
 
 gem 'sass-rails', '~> 5.0.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -47,7 +47,7 @@ group :test do
   gem 'factory_girl_rails', '>= 4.0.0'
   gem 'email_spec', '>= 1.2.1'
   gem 'shoulda', '>=3.1.1'
-  gem 'capybara', '~> 2.4.1'
+  gem 'capybara', '~> 2.5.0'
   gem 'database_cleaner', '>= 0.8.0'
   gem 'spork', '~> 1.0rc'
   gem 'spork-rails'
