@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 4.2.0'
+gem 'nokogiri', '~> 1.6.7.rc4'
 
 gem 'pg'
 gem 'puma', '~> 2.14.0'
