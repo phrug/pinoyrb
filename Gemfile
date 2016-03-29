@@ -4,13 +4,13 @@ gem 'rails', '~> 4.2.0'
 gem 'nokogiri', '~> 1.6.7.rc4'
 
 gem 'pg'
-gem 'puma', '~> 2.14.0'
+gem 'puma', '~> 3.2.0'
 
 gem 'sass-rails', '~> 5.0.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 2.0.1'
 
-gem 'rails_admin', '~> 0.7.0'
+gem 'rails_admin', '~> 0.8.0'
 
 gem 'haml'
 gem 'bootstrap-sass', "~> 3.3.3"
@@ -48,7 +48,7 @@ group :test do
   gem 'factory_girl_rails', '>= 4.0.0'
   gem 'email_spec', '>= 1.2.1'
   gem 'shoulda', '>=3.1.1'
-  gem 'capybara', '~> 2.5.0'
+  gem 'capybara', '~> 2.6.0'
   gem 'database_cleaner', '>= 0.8.0'
   gem 'spork', '~> 1.0rc'
   gem 'spork-rails'
