@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 4.2.0'
-gem 'nokogiri', '~> 1.6.7.rc4'
+gem 'nokogiri'
 
 gem 'pg'
 gem 'puma', '~> 3.2.0'
@@ -53,6 +53,7 @@ group :test do
   gem 'spork', '~> 1.0rc'
   gem 'spork-rails'
   gem 'guard'
+  gem 'listen', '~> 3.0.6'
   gem 'guard-bundler'
   gem 'guard-rspec'
   gem 'guard-spork'
