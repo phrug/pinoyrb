@@ -8,7 +8,7 @@ gem 'puma', '~> 3.6.0'
 
 gem 'sass-rails', '~> 5.0.0'
 gem 'coffee-rails', '~> 4.2.0'
-gem 'uglifier', '>= 2.0.1'
+gem 'closure-compiler'
 
 gem 'rails_admin', '~> 0.8.0'
 
