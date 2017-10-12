@@ -35,7 +35,7 @@ gem 'textacular', '~> 3.2.0'
 group :development, :test do
   gem 'rspec-rails', '~> 3.6.0'
   gem 'haml-rails', '~> 0.4'
-  gem 'mina'
+  gem 'mina', '~> 0.3.8'
   gem 'pry'
   gem 'better_errors'
   gem 'binding_of_caller'
