@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20140423143711) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20140423143711) do
     t.integer  "user_id"
     t.string   "position"
     t.boolean  "current"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "affiliations", ["entity_id"], name: "index_affiliations_on_entity_id", using: :btree
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(version: 20140423143711) do
     t.integer  "project_id"
     t.string   "role"
     t.boolean  "current"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   add_index "contributors", ["contributable_id"], name: "index_contributors_on_contributable_id", using: :btree
@@ -68,8 +68,8 @@ ActiveRecord::Schema.define(version: 20140423143711) do
     t.integer  "venue_id"
     t.boolean  "recruiting"
     t.boolean  "display"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   add_index "entities", ["slug"], name: "index_entities_on_slug", unique: true, using: :btree
@@ -83,8 +83,8 @@ ActiveRecord::Schema.define(version: 20140423143711) do
     t.integer  "venue_id"
     t.datetime "start_at"
     t.datetime "end_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.string   "youtube_playlist"
   end
 
@@ -109,8 +109,8 @@ ActiveRecord::Schema.define(version: 20140423143711) do
     t.string   "link_type"
     t.string   "linkable_type"
     t.integer  "linkable_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "presentation_tags", force: :cascade do |t|
@@ -131,8 +131,8 @@ ActiveRecord::Schema.define(version: 20140423143711) do
     t.string   "youtube"
     t.string   "slideshare"
     t.string   "speakerdeck"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "display_order"
   end
 
@@ -147,8 +147,8 @@ ActiveRecord::Schema.define(version: 20140423143711) do
     t.string   "website"
     t.string   "source_code"
     t.string   "pic"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true, using: :btree
@@ -160,8 +160,8 @@ ActiveRecord::Schema.define(version: 20140423143711) do
     t.string   "table"
     t.integer  "month",      limit: 2
     t.integer  "year",       limit: 8
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories", using: :btree
@@ -170,8 +170,8 @@ ActiveRecord::Schema.define(version: 20140423143711) do
     t.integer  "presentation_id"
     t.integer  "user_id"
     t.text     "custom_bio"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   add_index "speakers", ["presentation_id"], name: "index_speakers_on_presentation_id", using: :btree
@@ -181,8 +181,8 @@ ActiveRecord::Schema.define(version: 20140423143711) do
     t.integer  "event_id"
     t.integer  "entity_id"
     t.string   "role"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "sponsors", ["entity_id"], name: "index_sponsors_on_entity_id", using: :btree
@@ -213,8 +213,8 @@ ActiveRecord::Schema.define(version: 20140423143711) do
     t.string   "slug"
     t.string   "blurb"
     t.text     "about_me"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -228,8 +228,8 @@ ActiveRecord::Schema.define(version: 20140423143711) do
     t.text     "directions"
     t.decimal  "latitude",   precision: 15, scale: 12
     t.decimal  "longitude",  precision: 15, scale: 12
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
   add_index "venues", ["slug"], name: "index_venues_on_slug", unique: true, using: :btree
