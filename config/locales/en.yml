@@ -6,7 +6,7 @@ en:
     formats:
       default: '%d-%m-%Y %H:%M'
       friendly_date: '%b. %d, %Y'
-      long: '%b %d, %Y %l:%M%p'
+      long: '%b %d, %Y %I:%M%p'
   number:
     currency:
       format:

@@ -10,10 +10,10 @@ gem 'sass-rails', '~> 5.0.0'
 gem 'coffee-rails', '~> 4.2.0'
 gem 'uglifier', '>= 2.0.1'
 
-gem 'rails_admin', '~> 0.8.0'
+gem 'rails_admin', '~> 1.2'
 
 gem 'haml'
-gem 'bootstrap-sass', "~> 3.3.3"
+gem 'bootstrap-sass', "~> 3.3.7"
 gem 'underscore-rails'
 gem 'jquery-rails', '>=4.0.2'
 gem 'devise', '>=2.1.2'
