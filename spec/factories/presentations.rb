@@ -2,8 +2,7 @@
 
 FactoryGirl.define do
   factory :presentation do
-    name "MyString"
-    slug "MyString"
+    sequence(:name) {|n| "Presentation #{n}" }
     description "MyText"
     event nil
     youtube "MyString"
